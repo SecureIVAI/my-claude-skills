@@ -1,177 +1,181 @@
-# My Claude Skills
+<h1 align="center">My Claude Skills</h1>h1>
 
-Ready-to-use skills and agents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — covering customer success analytics, DISC personality profiling, leadership coaching, defect and SDLC metrics, project scheduling, prompt engineering, and workflow automation.
+<div align="center">
+<strong>Plug-and-play skills that make Claude Code unreasonably good at real work.</strong>strong>
+</div>div>
 
-**Download a ZIP, drop it into your Claude project folder, and start using it immediately.** No external dependencies, no API keys, no setup headaches.
+<br>
 
----
+<div align="center">
 
-## Table of Contents
+  [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/SecureIVAI/my-claude-skills/blob/main/LICENSE)
+  [![Stars](https://img.shields.io/github/stars/SecureIVAI/my-claude-skills?style=social)](https://github.com/SecureIVAI/my-claude-skills/stargazers)
+  [![Forks](https://img.shields.io/github/forks/SecureIVAI/my-claude-skills?style=social)](https://github.com/SecureIVAI/my-claude-skills/network/members)
+  ![8 Skills](https://img.shields.io/badge/skills-8-purple)
+  ![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen)
+  ![60 Second Setup](https://img.shields.io/badge/setup-60%20seconds-orange)
 
-- [What Are Claude Skills?](#what-are-claude-skills)
-- - [Skills Included](#skills-included)
-  - - [Quick Start](#quick-start)
-    - - [Skill Details](#skill-details)
-      - - [Repository Structure](#repository-structure)
-        - - [Requirements](#requirements)
-          - - [Contributing](#contributing)
-            - - [License](#license)
-             
-              - ---
+  </div>
 
-              ## What Are Claude Skills?
+  <div align="center">
+    <sub>Customer success analytics &bull; DISC profiling &bull; Leadership coaching &bull; SDLC metrics<br>Project scheduling &bull; Prompt engineering &bull; Workflow automation &bull; and more</sub>sub>
+  </div>div>
+  
+  ---
+  
+  ## Try It in 60 Seconds
+  
+  ```bash
+# 1. Clone it
+git clone https://github.com/SecureIVAI/my-claude-skills.git
 
-              Claude Skills are reusable configurations, prompts, scripts, and templates that extend what Claude Code can do. Think of them as plug-and-play modules — each skill focuses on a specific domain (customer analytics, leadership, project management, etc.) and gives Claude the context and tools it needs to deliver expert-level output in that area.
+# 2. Copy any skill into your project
+cp my-claude-skills/leadership-skill.zip ~/my-project/
+cd ~/my-project && unzip leadership-skill.zip
 
-              ---
+# 3. Start Claude Code. That's it. Claude picks up the skill automatically.
+```
 
-              ## Skills Included
-
-              | Skill | Description | Format |
-              |-------|-------------|--------|
-              | **Customer Success Manager** | Health scoring, churn risk analysis, and expansion opportunity identification for SaaS portfolios | Directory (Python CLI tools) |
-              | **DISC Profiling** | DISC personality assessment and communication coaching | ZIP |
-              | **Defect KPIs & SDLC Metrics** | Software quality metrics, defect tracking KPIs, and SDLC measurement frameworks | ZIP |
-              | **Leadership Skill** | Leadership coaching, team management strategies, and executive communication | ZIP |
-              | **Precise Verbs** | Writing skill focused on replacing weak verbs with strong, specific alternatives | ZIP |
-              | **Project Scheduler Agent** | Project planning, timeline estimation, and task dependency management | ZIP |
-              | **Prompt Design Bundle** | Prompt engineering patterns, templates, and best practices for Claude | ZIP |
-              | **Workflow Automation** | Task automation, process optimization, and workflow design | ZIP |
-
-              ---
-
-              ## Quick Start
-
-              ### Option 1: Use a ZIP Skill
-
-              1. Download the `.zip` file for the skill you want (e.g., `leadership-skill.zip`)
-              2. 2. Unzip it into your Claude Code project directory
-                 3. 3. Start a Claude Code session — Claude will automatically detect and use the skill
-                   
-                    4. ### Option 2: Use the Customer Success Manager (Directory Skill)
-                   
-                    5. The `customer-success-manager/` directory is ready to use as-is:
-                   
-                    6. ```bash
-                       # Clone the repo
-                       git clone https://github.com/SecureIVAI/my-claude-skills.git
-                       cd my-claude-skills
-
-                       # Run health scoring on your customer data
-                       python customer-success-manager/scripts/health_score_calculator.py your_data.json
-
-                       # Run churn risk analysis
-                       python customer-success-manager/scripts/churn_risk_analyzer.py your_data.json
-
-                       # Find expansion opportunities
-                       python customer-success-manager/scripts/expansion_opportunity_scorer.py your_data.json
-                       ```
-
-                       All three scripts support `--format json` for machine-readable output that can be piped into other tools.
-
-                       ### Option 3: Use the GSD (Get Shit Done) Agent
-
-                       This repo includes a pre-configured `.claude/` directory with the GSD v1.27.0 agent for Claude Code, complete with hooks for session monitoring, context tracking, and prompt guarding.
-
-                       ---
-
-                       ## Skill Details
-
-                       ### Customer Success Manager
-
-                       Production-grade customer success analytics with three Python CLI tools:
-
-                       - **Health Score Calculator** — Multi-dimensional scoring across usage (30%), engagement (25%), support (20%), and relationship (25%) dimensions. Classifies accounts as Green/Yellow/Red with trend analysis.
-                       - - **Churn Risk Analyzer** — Behavioral signal detection covering usage decline, engagement drops, support issues, relationship signals, and commercial factors. Outputs risk tiers: Critical, High, Medium, Low.
-                         - - **Expansion Opportunity Scorer** — Identifies upsell, cross-sell, and seat expansion opportunities with revenue estimates and priority rankings.
-                          
-                           - Includes QBR templates, success plan templates, onboarding checklists, health scoring framework documentation, and CS playbooks. See [`customer-success-manager/SKILL.md`](customer-success-manager/SKILL.md) for full documentation.
-                          
-                           - **Requirements:** Python 3.7+ (standard library only — zero external dependencies)
-                          
-                           - ### DISC Profiling
-                          
-                           - Personality assessment skill based on the DISC behavioral model (Dominance, Influence, Steadiness, Conscientiousness). Helps Claude coach users on communication styles, team dynamics, and interpersonal effectiveness.
-                          
-                           - ### Defect KPIs & SDLC Metrics
-                          
-                           - Frameworks for measuring software quality throughout the development lifecycle — defect density, escape rates, mean time to resolution, test coverage analysis, and release quality gates.
-                          
-                           - ### Leadership Skill
-                          
-                           - Executive coaching and leadership development — covers delegation frameworks, difficult conversations, strategic thinking, team motivation, and leadership communication patterns.
-                          
-                           - ### Precise Verbs
-                          
-                           - A writing-focused skill that trains Claude to replace vague, weak verbs with specific, powerful alternatives. Useful for professional writing, documentation, and business communication.
-                          
-                           - ### Project Scheduler Agent
-                          
-                           - An agentic skill for project planning — breaks down work into tasks, estimates durations, identifies dependencies, flags critical path items, and generates timeline visualizations.
-                          
-                           - ### Prompt Design Bundle
-                          
-                           - A collection of prompt engineering patterns and templates, including chain-of-thought structures, few-shot examples, system prompt frameworks, and evaluation rubrics for prompt quality.
-                          
-                           - ### Workflow Automation
-                          
-                           - Process design and automation skill — helps map existing workflows, identify bottlenecks, design optimized processes, and create automation specifications.
-                          
-                           - ---
-
-                           ## Repository Structure
-
-                           ```
-                           my-claude-skills/
-                           ├── .claude/                          # Claude Code configuration (GSD agent)
-                           │   ├── agents/                       # Agent definitions
-                           │   ├── commands/gsd/                 # GSD slash commands
-                           │   ├── get-shit-done/                # GSD core modules
-                           │   ├── hooks/                        # Session, context, and prompt hooks
-                           │   ├── settings.json                 # Claude Code settings with hook config
-                           │   └── package.json                  # GSD package metadata
-                           ├── customer-success-manager/         # Full directory skill (not zipped)
-                           │   ├── assets/                       # Sample data, templates (QBR, success plan, onboarding)
-                           │   ├── references/                   # Health scoring framework, CS playbooks, benchmarks
-                           │   ├── scripts/                      # Python CLI tools (health, churn, expansion)
-                           │   └── SKILL.md                      # Detailed skill documentation
-                           ├── DISC.zip                          # DISC personality profiling skill
-                           ├── Defect_KPIs_SDLC_Metrics.zip      # Software quality metrics skill
-                           ├── leadership-skill.zip              # Leadership coaching skill
-                           ├── precise-verbs-skill.zip           # Precise writing skill
-                           ├── project-scheduler-agent.zip       # Project scheduling agent
-                           ├── prompt-design-bundle.zip          # Prompt engineering skill
-                           ├── workflow.zip                      # Workflow automation skill
-                           ├── CONTRIBUTING.md                   # How to contribute
-                           ├── LICENSE                           # MIT License
-                           └── README.md                         # This file
-                           ```
-
-                           ---
-
-                           ## Requirements
-
-                           - **Claude Code** (Claude desktop app or CLI with Claude Code enabled)
-                           - - **Python 3.7+** for the Customer Success Manager scripts (standard library only)
-                             - - **Node.js** for the GSD agent hooks (included in `.claude/`)
-                              
-                               - No other external dependencies are required for any skill.
-                              
-                               - ---
-
-                               ## Contributing
-
-                               Contributions are welcome! Whether it is a new skill, an improvement to an existing one, or better documentation — all contributions help.
-
-                               See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to submit skills, report issues, or suggest improvements.
-
-                               ---
-
-                               ## License
-
-                               This project is licensed under the [MIT License](LICENSE) — you are free to use, modify, and distribute these skills in your own projects.
-
-                               ---
-
-                               **Built by [Secure IVAI](https://secureIVAI.com)** — Safely integrating and securing AI solutions for SMBs.
-                               
+> **No API keys. No config files. No dependencies.** Just unzip and go.
+>
+> ---
+>
+> ## What's Inside
+>
+> | | Skill | What It Does | Try It |
+> |---|-------|-------------|--------|
+> | :dart: | **Customer Success Manager** | Health scoring, churn prediction, expansion opportunities -- 3 Python CLI tools that analyze your entire SaaS portfolio | [Explore](customer-success-manager/) |
+> | :performing_arts: | **DISC Profiling** | Personality assessment and communication coaching based on the DISC behavioral model | [Download](DISC.zip) |
+> | :bug: | **Defect KPIs & SDLC Metrics** | Defect density, escape rates, MTTR, test coverage, release quality gates -- everything you need to measure software quality | [Download](Defect_KPIs_SDLC_Metrics.zip) |
+> | :crown: | **Leadership Skill** | Delegation frameworks, difficult conversations, strategic thinking, team motivation, and executive communication | [Download](leadership-skill.zip) |
+> | :pencil2: | **Precise Verbs** | Replaces weak, vague verbs with powerful, specific alternatives -- instantly sharpens any professional writing | [Download](precise-verbs-skill.zip) |
+> | :calendar: | **Project Scheduler Agent** | Breaks work into tasks, estimates durations, maps dependencies, flags critical path -- generates visual timelines | [Download](project-scheduler-agent.zip) |
+> | :bulb: | **Prompt Design Bundle** | Chain-of-thought patterns, few-shot templates, system prompt frameworks, and evaluation rubrics | [Download](prompt-design-bundle.zip) |
+> | :gear: | **Workflow Automation** | Maps existing processes, identifies bottlenecks, designs optimized workflows, creates automation specs | [Download](workflow.zip) |
+>
+> ---
+>
+> ## What Are Claude Skills?
+>
+> Think of them as **superpowers you install into Claude Code**. Each skill is a self-contained package of prompts, scripts, templates, and context that transforms Claude from a general-purpose assistant into a domain expert.
+>
+> Drop a skill into your project folder and Claude instantly knows how to do things like score customer health across a SaaS portfolio, coach you through difficult leadership conversations, or break a complex project into a dependency-mapped timeline.
+>
+> ---
+>
+> ## What People Build With These
+>
+> :briefcase: **SaaS Founders** run the Customer Success Manager tools before board meetings to identify at-risk accounts and expansion opportunities.
+>
+> :memo: **Technical Writers** use Precise Verbs to transform first drafts into sharp, professional documentation in a single Claude session.
+>
+> :bar_chart: **QA Leads** plug in the Defect KPIs skill to generate metrics dashboards that track quality across the entire SDLC.
+>
+> :people_holding_hands: **Managers** use the DISC and Leadership skills together to prepare for 1-on-1s, tailor their communication style, and navigate tough conversations.
+>
+> :rocket: **Project Managers** feed the Project Scheduler a scope doc and get back a structured timeline with critical path analysis.
+>
+> ---
+>
+> ## Deep Dive: Customer Success Manager
+>
+> The most fully-featured skill in the collection. Three production-grade Python CLI tools with zero external dependencies:
+>
+> ### Health Score Calculator
+> Multi-dimensional scoring across four weighted dimensions:
+>
+> | Dimension | Weight | What It Measures |
+> |-----------|--------|-----------------|
+> | Usage | 30% | Login frequency, feature adoption, DAU/MAU ratio |
+> | Engagement | 25% | Support tickets, meeting attendance, NPS/CSAT |
+> | Support | 20% | Open tickets, escalation rate, resolution time |
+> | Relationship | 25% | Executive sponsor engagement, multi-threading, renewal sentiment |
+>
+> Accounts are classified as **Green** (75-100), **Yellow** (50-74), or **Red** (0-49) with trend analysis comparing to previous periods.
+>
+> ### Churn Risk Analyzer
+> Detects behavioral signals across five risk categories and classifies accounts into tiers: **Critical** (immediate escalation), **High** (urgent intervention), **Medium** (proactive outreach), or **Low** (standard monitoring).
+>
+> ### Expansion Opportunity Scorer
+> Identifies upsell, cross-sell, and seat expansion opportunities with revenue estimates and priority rankings.
+>
+> ```bash
+> # Run the full pipeline
+> python customer-success-manager/scripts/health_score_calculator.py data.json --format json > health.json
+> python customer-success-manager/scripts/churn_risk_analyzer.py data.json --format json > risk.json
+> python customer-success-manager/scripts/expansion_opportunity_scorer.py data.json --format json > expansion.json
+> ```
+>
+> Also includes QBR templates, success plan templates, onboarding checklists, and CS playbooks. See the full docs in [`customer-success-manager/SKILL.md`](customer-success-manager/SKILL.md).
+>
+> ---
+>
+> ## Also Included: GSD Agent for Claude Code
+>
+> This repo comes pre-configured with the **GSD (Get Shit Done) v1.27.0** agent in the `.claude/` directory -- a productivity layer for Claude Code with:
+>
+> - **Session hooks** that keep Claude focused across long tasks
+> - - **Context monitoring** that tracks what Claude has touched
+>   - - **Prompt guards** that catch drift before Claude goes off-track
+>     - - **Status line** that shows real-time session health
+>       -
+>       - ---
+>       -
+>       - ## Repository Structure
+>       -
+>       - ```
+>         my-claude-skills/
+>         |-- .claude/                          # GSD agent (hooks, commands, settings)
+>         |-- customer-success-manager/         # Full directory skill with Python tools
+>         |   |-- assets/                       # Sample data + templates (QBR, success plan, onboarding)
+>         |   |-- references/                   # Health scoring framework, CS playbooks, benchmarks
+>         |   |-- scripts/                      # 3 Python CLI tools
+>         |   +-- SKILL.md                      # Complete documentation
+>         |-- DISC.zip                          # DISC personality profiling
+>         |-- Defect_KPIs_SDLC_Metrics.zip      # Software quality metrics
+>         |-- leadership-skill.zip              # Leadership coaching
+>         |-- precise-verbs-skill.zip           # Precision writing
+>         |-- project-scheduler-agent.zip       # Project scheduling
+>         |-- prompt-design-bundle.zip          # Prompt engineering
+>         |-- workflow.zip                      # Workflow automation
+>         |-- CONTRIBUTING.md                   # Contribution guide
+>         |-- LICENSE                           # MIT License
+>         +-- README.md                         # You are here
+>         ```
+>
+>         ---
+>
+>         ## Requirements
+>
+>         | Requirement | What For | Notes |
+>         |------------|----------|-------|
+>         | Claude Code | Everything | Desktop app or CLI |
+>         | Python 3.7+ | Customer Success Manager scripts | Standard library only |
+>         | Node.js | GSD agent hooks | Included in `.claude/` |
+>
+>         That's it. Every other skill is self-contained with zero dependencies.
+>
+>         ---
+>
+>         ## Contributing
+>
+>         We welcome new skills, improvements, and documentation fixes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
+>
+>         The short version: fork, create a branch, add your skill (with a `SKILL.md`), update this README, and open a PR.
+>
+>         ---
+>
+>         ## License
+>
+>         [MIT](LICENSE) -- use these skills however you want.
+>
+>         ---
+>
+>         <div align="center">
+  <strong>Built by <a href="https://secureIVAI.com">Secure IVAI</a></strong><br>
+  <sub>Safely integrating and securing AI solutions for SMBs.</sub><br><br>
+  <a href="https://github.com/SecureIVAI/my-claude-skills/stargazers">Star this repo</a> if you find it useful -- it helps others discover these skills too.
+  </div>
+  
+</sub>
+</strong>
