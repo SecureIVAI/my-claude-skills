@@ -2,7 +2,7 @@
 
 <div align="center">
 <strong>Plug-and-play skills that make Claude Code unreasonably good at real work.</strong>
-</div>div>
+</div>
 
 <br>
 
@@ -18,8 +18,8 @@
   </div>
 
   <div align="center">
-    <sub>Customer success analytics &bull; DISC profiling &bull; Leadership coaching &bull; SDLC metrics<br>Project scheduling &bull; Prompt engineering &bull; Workflow automation &bull; and more</sub>sub>
-  </div>div>
+    <sub>Customer success analytics &bull; DISC profiling &bull; Leadership coaching &bull; SDLC metrics<br>Project scheduling &bull; Prompt engineering &bull; Workflow automation &bull; and more</sub>
+  </div>
   
   ---
   
