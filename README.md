@@ -1,7 +1,7 @@
-<h1 align="center">My Claude Skills</h1>h1>
+<h1 align="center">My Claude Skills</h1>
 
 <div align="center">
-<strong>Plug-and-play skills that make Claude Code unreasonably good at real work.</strong>strong>
+<strong>Plug-and-play skills that make Claude Code unreasonably good at real work.</strong>
 </div>div>
 
 <br>
